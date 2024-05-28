@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="view_res_partner_form_inherit_is_address" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.is.address</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">           
+              <!-- Add the "active" field to the form view before the
+            notebook -->
+            <xpath expr="//sheet/notebook" position="before">
+                <group>
+                    <field name="active" string="Indirizzo di spedizione" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>
